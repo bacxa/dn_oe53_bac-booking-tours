@@ -65,3 +65,8 @@ yarn-debug.log*
 # Ignore uploaded files in development
 /storage/*
 !/storage/.keep
+
+.browserslistrc
+config/credentials.yml.enc
+
+/test
