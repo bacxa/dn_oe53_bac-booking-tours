@@ -1,4 +1,5 @@
 en:
+<<<<<<< HEAD
   home:
     index:
       featured_tour: "Featured Tour"
@@ -24,3 +25,5 @@ en:
       responsible: "Responsible"
       phone_number: "Phone number"
       address: "Adress"
+=======
+>>>>>>> Seup basic Gem
