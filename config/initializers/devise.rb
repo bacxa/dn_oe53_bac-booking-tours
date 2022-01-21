@@ -14,16 +14,25 @@ Devise.setup do |config|
   # confirmation, reset password and unlock tokens in the database.
   # Devise will use the `secret_key_base` as its `secret_key`
   # by default. You can change it below and use your own secret key.
+<<<<<<< HEAD
   # config.secret_key = "341a67971e4a4020e29096ab4a464f23d2c62a7dd2f17d72bd45e15441244fd4c79adae478dccb0668b26af7c1a78027827b7480d44b0b0eedf978b503e6f741"
 
   # ==> Controller configuration
   # Configure the parent class to the devise controllers.
   # config.parent_controller = "DeviseController"
+=======
+  # config.secret_key = '341a67971e4a4020e29096ab4a464f23d2c62a7dd2f17d72bd45e15441244fd4c79adae478dccb0668b26af7c1a78027827b7480d44b0b0eedf978b503e6f741'
+
+  # ==> Controller configuration
+  # Configure the parent class to the devise controllers.
+  # config.parent_controller = 'DeviseController'
+>>>>>>> Generate Database
 
   # ==> Mailer Configuration
   # Configure the e-mail address which will be shown in Devise::Mailer,
   # note that it will be overwritten if you use your own mailer class
   # with default "from" parameter.
+<<<<<<< HEAD
   config.mailer_sender = "please-change-me-at-config-initializers-devise@example.com"
 
   # Configure the class responsible to send e-mails.
@@ -31,12 +40,25 @@ Devise.setup do |config|
 
   # Configure the parent class responsible to send e-mails.
   # config.parent_mailer = "ActionMailer::Base"
+=======
+  config.mailer_sender = 'please-change-me-at-config-initializers-devise@example.com'
+
+  # Configure the class responsible to send e-mails.
+  # config.mailer = 'Devise::Mailer'
+
+  # Configure the parent class responsible to send e-mails.
+  # config.parent_mailer = 'ActionMailer::Base'
+>>>>>>> Generate Database
 
   # ==> ORM configuration
   # Load and configure the ORM. Supports :active_record (default) and
   # :mongoid (bson_ext recommended) by default. Other ORMs may be
   # available as additional gems.
+<<<<<<< HEAD
   require "devise/orm/active_record"
+=======
+  require 'devise/orm/active_record'
+>>>>>>> Generate Database
 
   # ==> Configuration for any authentication mechanism
   # Configure which keys are used when authenticating a user. The default is
@@ -84,8 +106,13 @@ Devise.setup do |config|
   # If 401 status code should be returned for AJAX requests. True by default.
   # config.http_authenticatable_on_xhr = true
 
+<<<<<<< HEAD
   # The realm used in Http Basic Authentication. "Application" by default.
   # config.http_authentication_realm = "Application"
+=======
+  # The realm used in Http Basic Authentication. 'Application' by default.
+  # config.http_authentication_realm = 'Application'
+>>>>>>> Generate Database
 
   # It will change confirmation, password recovery and other workflows
   # to behave the same regardless if the e-mail provided was right or wrong.
@@ -95,7 +122,11 @@ Devise.setup do |config|
   # By default Devise will store the user in session. You can skip storage for
   # particular strategies by setting this option.
   # Notice that if you are skipping storage for all authentication paths, you
+<<<<<<< HEAD
   # may want to disable generating routes to Devise"s sessions controller by
+=======
+  # may want to disable generating routes to Devise's sessions controller by
+>>>>>>> Generate Database
   # passing skip: :sessions to `devise_for` in your config/routes.rb
   config.skip_session_storage = [:http_auth]
 
@@ -108,7 +139,11 @@ Devise.setup do |config|
   # When false, Devise will not attempt to reload routes on eager load.
   # This can reduce the time taken to boot the app but if your application
   # requires the Devise mappings to be loaded during boot time the application
+<<<<<<< HEAD
   # won"t boot properly.
+=======
+  # won't boot properly.
+>>>>>>> Generate Database
   # config.reload_routes = true
 
   # ==> Configuration for :database_authenticatable
@@ -126,12 +161,21 @@ Devise.setup do |config|
   config.stretches = Rails.env.test? ? 1 : 12
 
   # Set up a pepper to generate the hashed password.
+<<<<<<< HEAD
   # config.pepper = "5884bffdb7b248e35f2dfb277af052bab567d471eb82f9a6ad3b8a1c040b733b4a53677cbe42f0b804aadfaba13199838b9dd34a13b2a4c6fa9333e659f42abb"
 
   # Send a notification to the original email when the user"s email is changed.
   # config.send_email_changed_notification = false
 
   # Send a notification email when the user"s password is changed.
+=======
+  # config.pepper = '5884bffdb7b248e35f2dfb277af052bab567d471eb82f9a6ad3b8a1c040b733b4a53677cbe42f0b804aadfaba13199838b9dd34a13b2a4c6fa9333e659f42abb'
+
+  # Send a notification to the original email when the user's email is changed.
+  # config.send_email_changed_notification = false
+
+  # Send a notification email when the user's password is changed.
+>>>>>>> Generate Database
   # config.send_password_change_notification = false
 
   # ==> Configuration for :confirmable
@@ -148,7 +192,11 @@ Devise.setup do |config|
   # A period that the user is allowed to confirm their account before their
   # token becomes invalid. For example, if set to 3.days, the user can confirm
   # their account within 3 days after the mail was sent, but on the fourth day
+<<<<<<< HEAD
   # their account can"t be confirmed with the token any more.
+=======
+  # their account can't be confirmed with the token any more.
+>>>>>>> Generate Database
   # Default is nil, meaning there is no restriction on how long a user can take
   # before confirming their account.
   # config.confirm_within = 3.days
@@ -169,7 +217,11 @@ Devise.setup do |config|
   # Invalidates all the remember me tokens when the user signs out.
   config.expire_all_remember_me_on_sign_out = true
 
+<<<<<<< HEAD
   # If true, extends the user"s remember period when remembered via cookie.
+=======
+  # If true, extends the user's remember period when remembered via cookie.
+>>>>>>> Generate Database
   # config.extend_remember_period = false
 
   # Options to be passed to the created cookie. For instance, you can set
@@ -222,7 +274,11 @@ Devise.setup do |config|
   # config.reset_password_keys = [:email]
 
   # Time interval you can reset your password with a reset password key.
+<<<<<<< HEAD
   # Don"t put a too small interval or your users won"t have the time to
+=======
+  # Don't put a too small interval or your users won't have the time to
+>>>>>>> Generate Database
   # change their passwords.
   config.reset_password_within = 6.hours
 
@@ -242,11 +298,19 @@ Devise.setup do |config|
 
   # ==> Scopes configuration
   # Turn scoped views on. Before rendering "sessions/new", it will first check for
+<<<<<<< HEAD
   # "users/sessions/new". It"s turned off by default because it"s slower if you
   # are using only default views.
   config.scoped_views = true
 
   # Configure the default scope given to Warden. By default it"s the first
+=======
+  # "users/sessions/new". It's turned off by default because it's slower if you
+  # are using only default views.
+  # config.scoped_views = false
+
+  # Configure the default scope given to Warden. By default it's the first
+>>>>>>> Generate Database
   # devise role declared in your routes (usually :user).
   # config.default_scope = :user
 
@@ -263,7 +327,11 @@ Devise.setup do |config|
   # should add them to the navigational formats lists.
   #
   # The "*/*" below is required to match Internet Explorer requests.
+<<<<<<< HEAD
   # config.navigational_formats = ["*/*", :html]
+=======
+  # config.navigational_formats = ['*/*', :html]
+>>>>>>> Generate Database
 
   # The default HTTP method used to sign out a resource. Default is :delete.
   config.sign_out_via = :delete
@@ -271,7 +339,11 @@ Devise.setup do |config|
   # ==> OmniAuth
   # Add a new OmniAuth provider. Check the wiki for more information on setting
   # up on your models and hooks.
+<<<<<<< HEAD
   # config.omniauth :github, "APP_ID", "APP_SECRET", scope: "user,public_repo"
+=======
+  # config.omniauth :github, 'APP_ID', 'APP_SECRET', scope: 'user,public_repo'
+>>>>>>> Generate Database
 
   # ==> Warden configuration
   # If you want to use other strategies, that are not supported by Devise, or
@@ -283,18 +355,30 @@ Devise.setup do |config|
   # end
 
   # ==> Mountable engine configurations
+<<<<<<< HEAD
   # When using Devise inside an engine, let"s call it `MyEngine`, and this engine
   # is mountable, there are some extra configurations to be taken into account.
   # The following options are available, assuming the engine is mounted as:
   #
   #     mount MyEngine, at: "/my_engine"
+=======
+  # When using Devise inside an engine, let's call it `MyEngine`, and this engine
+  # is mountable, there are some extra configurations to be taken into account.
+  # The following options are available, assuming the engine is mounted as:
+  #
+  #     mount MyEngine, at: '/my_engine'
+>>>>>>> Generate Database
   #
   # The router that invoked `devise_for`, in the example above, would be:
   # config.router_name = :my_engine
   #
   # When using OmniAuth, Devise cannot automatically set OmniAuth path,
   # so you need to do it manually. For the users scope, it would be:
+<<<<<<< HEAD
   # config.omniauth_path_prefix = "/my_engine/users/auth"
+=======
+  # config.omniauth_path_prefix = '/my_engine/users/auth'
+>>>>>>> Generate Database
 
   # ==> Turbolinks configuration
   # If your app is using Turbolinks, Turbolinks::Controller needs to be included to make redirection work correctly:
