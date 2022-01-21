@@ -16,12 +16,16 @@
           <a class="nav-link active" href="#"><%= t(".reviews")%></a>
         </li>
       </ul>
-      <span class="navbar-text">
-        <a href=""><%= t(".login")%></a>
-      </span> &nbsp;
-      <span class="navbar-text">
-        <a href=""><%= t(".registration")%></a>
-      </span>
+      <% if user_signed_in? %>
+        <%= link_to "Đăng xuất", destroy_user_session_path, method: :delete, class: "navbar-text"%>
+      <% else %>
+        <span class="navbar-text">
+          <%= link_to t(".login"), new_user_session_path %>
+        </span> &nbsp;
+        <span class="navbar-text">
+          <%= link_to t(".registration"), new_user_registration_path %>
+        </span>
+      <% end %>
     </div>
   </div>
 </nav>
