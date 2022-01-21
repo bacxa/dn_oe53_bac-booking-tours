@@ -1,1 +1,26 @@
 en:
+  home:
+    index:
+      featured_tour: "Featured Tour"
+      other_tours: "Other Tours"
+      regular_tours: "Regular Tours"
+      book_now: "Book now"
+      reviews: "Reviews"
+
+  layouts:
+    navbar:
+      booking_tours: "Booking Tours"
+      home: "Home"
+      reviews: "Reviews"
+      login: "Login"
+      registration: "Registration"
+
+    footer:
+      about_us: "About Us"
+      contact: "Contact"
+      collaboration: "Become a partner"
+      help: "Help"
+      company: "Limited liability company %{company}"
+      responsible: "Ed: %{ed}"
+      phone_number: "Phone number: %{phone}"
+      address: "Address: %{address}"
