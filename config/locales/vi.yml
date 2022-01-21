@@ -1,0 +1,26 @@
+vi:
+  home:
+    index:
+      featured_tour: "Tours nổi bật"
+      other_tours: "Các loại tours khác"
+      regular_tours: "Tours thường xuyên"
+      book_now: "Đặt ngay"
+      reviews: "Reviews"
+
+  layouts:
+    navbar:
+      booking_tours: "Đặt Tours"
+      home: "Trang chủ"
+      reviews: "Cảm nhận"
+      login: "Đăng nhập"
+      registration: "Đăng ký"
+
+    footer:
+      about_us: "Thông tin về chúng tôi"
+      contact: "Liên hệ"
+      collaboration: "Trở thành đối tác"
+      help: "Giúp đỡ"
+      company: "Công ty trách nhiệm hữu hạn"
+      responsible: "Chịu trách nhiệm"
+      phone_number: "Số điện thoại"
+      address: "Địa chỉ"
