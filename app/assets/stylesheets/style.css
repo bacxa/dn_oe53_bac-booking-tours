@@ -266,3 +266,17 @@ small {
       width: 50%
   }
 }
+
+.form-tour{
+  float: right;
+  width: 1000px !important;
+}
+
+.quantity{
+  display: flex;
+  justify-content: flex-start;
+}
+
+.item-quantity{
+  margin-left:  10px;
+}

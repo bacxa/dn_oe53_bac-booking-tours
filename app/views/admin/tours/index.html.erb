@@ -1,0 +1,31 @@
+<div class="content-wrapper">
+  <div class="content-header">
+    <div class="container-fluid">
+      <h1>TOURS</h1>
+      <table class="table table-bordered">
+        <thead>
+          <tr>
+            <th>Name</th>
+            <th>Price</th>
+            <th>Action</th>
+          </tr>
+        </thead>
+
+        <tbody>
+          <% @tours.each do |tour| %>
+            <tr>
+              <td><%= tour.name %></td>
+              <td><%= tour.price %></td>
+              <td>
+                <%= link_to "<i class='fas fa-pencil-alt'></i>".html_safe, edit_admin_tour_path(tour) %> &emsp;
+                <%= link_to "<i class='fas fa-trash-alt'></i>".html_safe, admin_tour_path(tour), method: :delete, data: { confirm: "Are you sure?" } %>
+              </td>
+            </tr>
+          <% end %>
+        </tbody>
+      </table>
+      <br>
+      <%= link_to "<button class= 'btn btn-success'>Create Tour</button>".html_safe, new_admin_tour_path %>
+    </div>
+  </div>
+</div>
