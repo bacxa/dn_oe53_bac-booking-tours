@@ -12,7 +12,13 @@
   </head>
 
   <body>
-    <%= render "layouts/admin/sidebar" %>
-    <%= yield %>
+    <div class="admin-page">
+      <div class="abc">
+        <%= render "layouts/admin/sidebar" %>
+      </div>
+      <div class="xyz">
+        <%= yield %>
+      </div>
+    </div>
   </body>
 </html>
