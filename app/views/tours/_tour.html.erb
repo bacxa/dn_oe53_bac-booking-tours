@@ -1,0 +1,29 @@
+<% @tours.map do |tour| %>
+  <div class="col-6 col-lg-3">
+    <div class="featured-tours-box">
+      <%= link_to tour do %>
+        <img src="<%= tour.images %>" />
+        <div class="tour-name">
+          <p> <%= tour.name %> </p>
+        </div>
+        <div class="rating">
+          <span><i class="fas fa-star icon-rating-tour"></i></span>
+          <span><i class="fas fa-star icon-rating-tour"></i></span>
+          <span><i class="fas fa-star icon-rating-tour"></i></span>
+          <span><i class="fas fa-star icon-rating-tour"></i></span>
+          <span><i class="fas fa-star icon-rating-tour"></i></span>
+          <span><i class="fas fa-star"></i></span>
+        </div>
+
+        <div class="booking-price">
+          <div class="price-tour">
+            <p><%= tour.price %></p>
+          </div>
+          <div class="booking-tours-now">
+            <button class="btn btn-primary"><%= link_to "Đặt ngay", new_booking_tour_path(tour) %></button>
+          </div>
+        </div>
+      <% end %>
+    </div>
+  </div>
+<% end %>

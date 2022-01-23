@@ -2,6 +2,10 @@
   margin-top: 20px;
 }
 
+.body{
+  margin-top: 40px;
+}
+
 #featured-tours{
   margin-top: 20px;
 }
@@ -279,4 +283,8 @@ small {
 
 .item-quantity{
   margin-left:  10px;
+}
+
+.booking-tours-now a{
+  color: #fff;
 }

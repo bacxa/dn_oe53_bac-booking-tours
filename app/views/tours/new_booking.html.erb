@@ -1,0 +1,51 @@
+<div class="container body">
+  <%= form_for(@booking, url: booking_tour_path) do |f| %>
+    <% if current_user.nil? %>
+      <p>
+        <strong>Vui lòng đăng nhập để Booking tour</strong><br>
+      </p>
+    <% else %>
+      <div id="error_messages_booking" class="alert-danger-booking">
+      </div>
+
+      <h2> Chi tiet tuor </h2>
+      <div class="row">
+        <div class="col-sm-6 col-xs-12" />
+          <div class="form-group">
+            <%= f.label :"Ngày bắt đầu dự kiến" %>
+            <%= f.datetime_field :est_start_date, class: "form-control" %>
+          </div>
+        </div>
+
+        <div class="col-sm-6 col-xs-12" />
+          <div class="form-group">
+            <%= f.label :"Ngày bắt đầu" %>
+            <%= f.datetime_field :start_date, class: "form-control" %>
+          </div>
+        </div>
+      </div>
+
+      <h2> Thong tin hanh khach</h2>
+    <div>
+    <div id="guests">
+      <%= f.fields_for :guests do |guest| %>
+        <%= render "guest_fields", f: guest %>
+      <% end %>
+
+      <div class="links">
+        <%= link_to_add_association "Thêm hành khách", f, :guests %>
+      </div>
+    </div>
+
+    </div>
+
+      <div id="success-message-booking" class="alert-success-custom"></div>
+        <div class="form-group">
+          <div class="submit-booking">
+            <%= f.submit "Booking now", class: "btn btn-outline-primary" %>
+          </div>
+        </div>
+      </div>
+    <% end %>
+  <% end %>
+</div>
