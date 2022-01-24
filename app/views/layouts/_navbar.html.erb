@@ -1,0 +1,37 @@
+<nav class="navbar navbar-expand-lg navbar-light bg-light">
+  <div class="container-fluid">
+    <a class="navbar-brand" href="#"><%= Settings.booking.brand %></a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarText" aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarText">
+      <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+        <li class="nav-item">
+          <a class="nav-link active" aria-current="page" href="#"><%= t ".home" %></a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link active" href="#"><%= t ".booking_tours" %></a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link active" href="#"><%= t ".reviews" %></a>
+        </li>
+      </ul>
+      <div class="dropdown">
+        <a class="dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false">
+          <i class="fas fa-2x fa-language"></i>
+        </a>
+        <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
+          <li><%= link_to "English", url_for(locale: :en), class: "dropdown-item" %></li>
+          <li><%= link_to "Vietnamese", url_for(locale: :vi), class: "dropdown-item" %></li>
+        </ul>
+      </div>&nbsp;&nbsp;&nbsp;
+
+      <span class="navbar-text">
+        <a href=""><%= t ".login" %></a>
+      </span> &nbsp;
+      <span class="navbar-text">
+        <a href=""><%= t ".registration" %></a>
+      </span>
+    </div>
+  </div>
+</nav>

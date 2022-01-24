@@ -1,0 +1,31 @@
+<footer>
+  <div class="container pl-15-important">
+    <div class="row">
+      <div class="col-xs-12 col-sm-6 categories-ft">
+        <ul>
+          <li><a href="#"><%= t ".about_us" %></a></li>
+          <li><a href="#"><%= t ".contact" %></a></li>
+          <li><a href="#"><%= t ".collaboration" %></a></li>
+          <li><a href="#"><%= t ".help" %></a></li>
+        </ul>
+      </div>
+      <div class="col-xs-12 col-sm-6">
+        <div class="logo-footer">
+        </div>
+        <p>
+          <%= t ".company", company: Settings.booking.company %><br/>
+          <%= t ".responsible", ed: Settings.booking.ed %><br/>
+          <%= t ".phone_number", phone: Settings.booking.phone %><br/>
+          <%= t ".address", address: Settings.booking.address %>
+        </p>
+        <div class="social">
+          <i class="fab fa-facebook fa-2x mr-20"></i>
+          <i class="fab fa-google-plus fa-2x mr-20"></i>
+          <i class="fab fa-twitter-square fa-2x mr-20"></i>
+        </div>
+      </div>
+    </div>
+    <hr />
+    <div class="ta-center"><%= Settings.booking.brand %><%= Settings.booking.year %> &copy;</div>
+  </div>
+</footer>
