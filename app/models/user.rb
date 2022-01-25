@@ -25,4 +25,10 @@ class User < ApplicationRecord
   end
 
   enum role: {user: 0, admin: 1}
+
+  private
+
+  def password_validation?
+    new_record? || password_digest_changed?
+  end
 end
