@@ -30,7 +30,8 @@ en:
       reviews: "Reviews"
       login: "Login"
       registration: "Registration"
-      logout: "logout"
+      logout: "Logout"
+      manager: "Manager"
 
     footer:
       about_us: "About Us"

@@ -12,7 +12,8 @@ class User < ApplicationRecord
 
   has_secure_password
   validates :password, presence: true,
-    length: {minimum: Settings.user.length_password.min}
+    length: {minimum: Settings.user.length_password.min},
+    if: :password_validation?
 
   def self.digest string
     cost = if ActiveModel::SecurePassword.min_cost
@@ -25,4 +26,10 @@ class User < ApplicationRecord
   end
 
   enum role: {user: 0, admin: 1}
+
+  private
+
+  def password_validation?
+    new_record? || password_digest_changed?
+  end
 end

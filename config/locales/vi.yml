@@ -31,6 +31,7 @@ vi:
       login: "Đăng nhập"
       registration: "Đăng ký"
       logout: "Đăng xuất"
+      manager: "Quản lý"
 
     footer:
       about_us: "Thông tin về chúng tôi"
