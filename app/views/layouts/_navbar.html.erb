@@ -21,17 +21,20 @@
           <i class="fas fa-2x fa-language"></i>
         </a>
         <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
-          <li><%= link_to "English", url_for(locale: :en), class: "dropdown-item" %></li>
-          <li><%= link_to "Vietnamese", url_for(locale: :vi), class: "dropdown-item" %></li>
+          <li><%= link_to Settings.language.english, url_for(locale: :en), class: "dropdown-item" %></li>
+          <li><%= link_to Settings.language.vietnamese, url_for(locale: :vi), class: "dropdown-item" %></li>
         </ul>
       </div>&nbsp;&nbsp;&nbsp;
-
-      <span class="navbar-text">
-        <a href=""><%= t ".login" %></a>
-      </span> &nbsp;
-      <span class="navbar-text">
-        <a href=""><%= t ".registration" %></a>
-      </span>
+      <% if logged_in? %>
+        <%= link_to t(".logout"), logout_path, method: :delete, class: "navbar-text"%>
+      <% else %>
+        <span class="navbar-text">
+          <%= link_to t(".login"), login_path %>
+        </span> &nbsp;
+        <span class="navbar-text">
+          <%= link_to t(".registration"), signup_path %>
+        </span>
+      <% end %>
     </div>
   </div>
 </nav>
