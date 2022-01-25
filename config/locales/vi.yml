@@ -25,6 +25,7 @@ vi:
       login: "Đăng nhập"
       registration: "Đăng ký"
       logout: "Đăng xuất"
+      manager: "Quản lý"
 
     footer:
       about_us: "Thông tin về chúng tôi"
@@ -64,3 +65,14 @@ vi:
       registration_now: "Đăng ký ngay!"
       sign_in: "Đăng nhập"
       do_not_have_an_account: "Bạn chưa có tài khoản?"
+
+  admin:
+    home:
+      index:
+       no_session: "Bạn cần đăng nhập để tiếp tục"
+       not_have_access: "Bạn không có quyền truy cập"
+
+    sidebar:
+      dash_board: "Dash board"
+      logout: "Đăng xuất"
+      back_to_home: "Quay về trang chủ"
