@@ -1,0 +1,47 @@
+<div class="container">
+  <div class="row d-flex justify-content-center mt-5">
+    <div class="col-12 col-md-8 col-lg-6 col-xl-5">
+      <div class="card py-3 px-2">
+        <div class="division">
+          <div class="row">
+            <div class="col-3">
+              <div class="line l"></div>
+            </div>
+            <div class="col-6"><span><%= t ".register_by_email" %></span></div>
+            <div class="col-3">
+              <div class="line r"></div>
+            </div>
+          </div>
+        </div>
+        <%= form_for(@user) do |f| %>
+          <%= render "shared/error_messages" %>
+
+          <div class="form-group">
+            <%= f.label :name %><br />
+            <%= f.text_field :name, autofocus: true, class: "form-control form-user" %>
+          </div>
+
+          <div class="form-group">
+            <%= f.label :email %><br />
+            <%= f.email_field :email, autofocus: true, autocomplete: "email", class: "form-control form-user" %>
+          </div>
+
+          <div class="form-group">
+            <%= f.label :password %>
+            <%= f.password_field :password, autocomplete: "new-password", class: "form-control form-user" %>
+          </div>
+
+          <div class="form-group">
+            <%= f.label :password_confirmation %><br />
+            <%= f.password_field :password_confirmation, autocomplete: "new-password", class: "form-control form-user" %>
+          </div>
+
+          <div class="form-group mt-3">
+            <%= f.submit t(".register"), class:"btn btn-user btn-success"%>
+          </div>
+        <p><%= t ".do_you_already_have_an_account" %><%= link_to t(".login_now"), login_path %></p>
+        <% end %>
+      </div>
+    </div>
+  </div>
+</div>

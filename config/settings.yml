@@ -5,3 +5,13 @@ booking:
   phone: "0366797483"
   address: "14 Huy Du, Son Tra district, Da Nang city"
   year: "2022"
+user:
+  length_name:
+    max: 50
+  length_email:
+    max: 255
+  length_password:
+    min: 6
+language:
+  vietnamese: "Vietnamese"
+  english: "English"

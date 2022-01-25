@@ -1,4 +1,20 @@
 en:
+  activerecord:
+    models:
+      user: "User"
+    attributes:
+      user:
+        name: "Name"
+        email: "Email"
+        password: "Password"
+        password_confirmation: "Password confirmation"
+
+  controllers:
+    sessions:
+      flash: "Wrong account or password."
+    users:
+      flash: "Wellcome to Booking Tour!"
+
   home:
     index:
       featured_tour: "Featured Tour"
@@ -14,6 +30,7 @@ en:
       reviews: "Reviews"
       login: "Login"
       registration: "Registration"
+      logout: "logout"
 
     footer:
       about_us: "About Us"
@@ -24,3 +41,23 @@ en:
       responsible: "Ed: %{ed}"
       phone_number: "Phone number: %{phone}"
       address: "Address: %{address}"
+
+  users:
+    new:
+      login_now: "login now!"
+      register_by_email: "Register by email"
+      register: "Register"
+      do_you_already_have_an_account: "Do you already have an account?"
+
+  sessions:
+    new:
+      sign_in_with_your_social_media_account: "Sign in with your social media account"
+      sign_in_with_email: "Sign in with email"
+      registration_now: "Registration now!"
+      sign_in: "Sign in"
+      do_not_have_an_account: "Do not have an account?"
+
+  shared:
+    error_messages:
+      the_form_contains: "The form contains"
+      error: "error"

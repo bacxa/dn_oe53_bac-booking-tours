@@ -1,4 +1,20 @@
 vi:
+  activerecord:
+    models:
+      user: "User"
+    attributes:
+      user:
+        name: "Tên"
+        email: "Email"
+        password: "Mật khẩu"
+        password_confirmation: "Xác nhận mật khẩu"
+
+  controllers:
+    sessions:
+      flash: "Sai tài khoản hoặc mật khẩu."
+    users:
+      flash: "Chào mừng bạn đến với Booking Tour!"
+
   home:
     index:
       featured_tour: "Tours nổi bật"
@@ -14,6 +30,7 @@ vi:
       reviews: "Cảm nhận"
       login: "Đăng nhập"
       registration: "Đăng ký"
+      logout: "Đăng xuất"
 
     footer:
       about_us: "Thông tin về chúng tôi"
@@ -24,3 +41,22 @@ vi:
       responsible: "Chịu trách nhiệm: %{ed}"
       phone_number: "Số điện thoại: %{phone}"
       address: "Địa chỉ: %{address}"
+
+  users:
+    new:
+      login_now: "Đăng nhập ngay!"
+      register_by_email: "Đăng ký bằng email"
+      register: "Đăng ký"
+      do_you_already_have_an_account: "Bạn đã có tài khoản?"
+  sessions:
+    new:
+      sign_in_with_your_social_media_account: "Đăng nhập bằng tài khoản mạng xã hội"
+      sign_in_with_email: "Đăng nhập bằng email"
+      registration_now: "Đăng ký ngay!"
+      sign_in: "Đăng nhập"
+      do_not_have_an_account: "Bạn chưa có tài khoản?"
+
+  shared:
+    error_messages:
+      the_form_contains: "Biểu mẫu chứa"
+      error: "lỗi"
