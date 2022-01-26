@@ -20,6 +20,15 @@ vi:
         info_regular: "Thông tin Tour thường xuyên"
         images: "Ảnh"
 
+      guest:
+        name: "Tên"
+        dob: "Ngày tháng năm sinh"
+        passport: "Số chứng minh nhân dân"
+        phone_number: "Số điện thoại"
+
+      booking:
+        est_start_date: "Ngày bắt đầu dự kiến"
+        start_date: "Ngày bắt đầu"
 
   controllers:
     sessions:
@@ -94,3 +103,24 @@ vi:
     error_messages:
       the_form_contains: "Biểu mẫu chứa"
       error: "lỗi"
+
+  tours:
+    new_booking:
+      info_tour: "Chi tiết Tour"
+      please_login_to_book: "Vui lòng đăng nhập để đặt"
+      info_guest: "Thông tin hành khách"
+      booking_now: "Đặt ngay"
+      add_guests: "Thêm hành khách"
+      no_session: "Bạn cần đăng nhập để tiếp tục"
+
+    show:
+      infomation_tour: "Thông tin chi tiết Tour"
+      price_tour: "Giá Tour"
+      quantity: "Số lượng"
+      book_this_tour_now: "Hãy đặt ngay Tour này"
+      booking_now: "Đặt ngay"
+      tour_hot: "Tour hot"
+      nice_place: "Địa điểm đẹp"
+
+    tour:
+      booking_now: "Đặt ngay"

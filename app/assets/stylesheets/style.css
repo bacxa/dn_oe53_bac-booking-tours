@@ -280,3 +280,15 @@ small {
 .item-quantity{
   margin-left:  10px;
 }
+
+.booking-tours-now a{
+  color: #fff;
+}
+
+.rounded{
+  width: 100%;
+}
+
+.info-right{
+  margin-top: 132px;
+}
