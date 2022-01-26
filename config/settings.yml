@@ -15,3 +15,6 @@ user:
 language:
   vietnamese: "Vietnamese"
   english: "English"
+tour:
+  per_page: 8
+  admin_per_page: 10

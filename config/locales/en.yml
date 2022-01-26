@@ -9,6 +9,17 @@ en:
         password: "Password"
         password_confirmation: "Password confirmation"
 
+      tour:
+        name: "Tour Name"
+        description: "Description"
+        price: "Price"
+        sort: "Type"
+        min_guest: "Min guest"
+        max_guest: "Max guest"
+        duration: "Duration"
+        info_regular: "Info Regular"
+        images: "Image"
+
   home:
     index:
       featured_tour: "Featured Tour"
@@ -70,8 +81,33 @@ en:
     home:
       index:
        no_session: "You need to log in to continue"
+       not_have_access: "not have access"
+
+    tours:
+      create:
+        success: "Create success"
 
     sidebar:
       dash_board: "Dash board"
       logout: "Logout"
       back_to_home: "Back to home"
+
+    tours:
+      form:
+        edit_tour: "Edit Tour"
+        create_tour: "Create Tour"
+      index:
+        name: "Tour Name"
+        price: "Price"
+        action: "Action"
+        create_tour: "Create Tour"
+      show:
+        edit_tour: "Edit Tour"
+        info_tour: "Info Tour"
+        name: "Name"
+        price: "Price"
+        description: "Description"
+        type: "Type"
+        min_guest: "Min guest"
+        max_guest: "Max guest"
+        duration: "Duration"

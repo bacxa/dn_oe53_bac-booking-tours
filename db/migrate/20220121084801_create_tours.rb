@@ -4,7 +4,6 @@ class CreateTours < ActiveRecord::Migration[6.1]
       t.string :name, null: false
       t.text :description, null: false
       t.integer :price, default: false
-      t.string :images, null: false
       t.integer :sort, default: 0
       t.integer :max_guest
       t.integer :min_guest

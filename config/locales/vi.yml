@@ -9,6 +9,17 @@ vi:
         password: "Mật khẩu"
         password_confirmation: "Xác nhận mật khẩu"
 
+      tour:
+        name: "Tour Name"
+        description: "Description"
+        price: "Price"
+        sort: "Type"
+        min_guest: "Min guest"
+        max_guest: "Max guest"
+        duration: "Duration"
+        info_regular: "Info Regular"
+        images: "Image"
+
   home:
     index:
       featured_tour: "Tours nổi bật"
@@ -72,7 +83,32 @@ vi:
        no_session: "Bạn cần đăng nhập để tiếp tục"
        not_have_access: "Bạn không có quyền truy cập"
 
+    tours:
+      create:
+        success: "Tạo thành công"
+
     sidebar:
       dash_board: "Dash board"
       logout: "Đăng xuất"
       back_to_home: "Quay về trang chủ"
+
+    tours:
+      form:
+        edit_tour: "Cập nhật tour"
+        create_tour: "Tạo tour"
+        error_limit: "max guest should be greater than min guest"
+      index:
+        name: "Tên Tour"
+        price: "Giá"
+        action: "Action"
+        create_tour: "Tạo Tour"
+      show:
+        edit_tour: "Cập nhật Tour"
+        info_tour: "Thông tin Tour"
+        name: "Tên"
+        price: "Giá"
+        description: "Mô tả"
+        type: "Loại hình"
+        min_guest: "Số lượng tối thiểu"
+        max_guest: "Số lượng tối đa"
+        duration: "Khoảng thời gian"
