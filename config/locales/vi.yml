@@ -9,6 +9,18 @@ vi:
         password: "Mật khẩu"
         password_confirmation: "Xác nhận mật khẩu"
 
+      tour:
+        name: "Tên Tour"
+        description: "Thông tin Tour"
+        price: "Giá"
+        sort: "Loại hình"
+        min_guest: "Số người tối thiểu"
+        max_guest: "Số người tối đa"
+        duration: "Khoảng thời gian"
+        info_regular: "Thông tin Tour thường xuyên"
+        images: "Ảnh"
+
+
   controllers:
     sessions:
       flash: "Sai tài khoản hoặc mật khẩu."
@@ -32,6 +44,27 @@ vi:
       registration: "Đăng ký"
       logout: "Đăng xuất"
       manager: "Quản lý"
+
+  admin:
+    tours:
+      form:
+        edit_tour: "Cập nhật Tour"
+        create_tour: "Tạo Tour"
+      index:
+        name: "Tên Tour"
+        price: "Giá"
+        action: "Action"
+        create_tour: "Tạo Tour"
+      show:
+        edit_tour: "Cập nhật Tour"
+        info_tour: "Thông tin Tour"
+        name: "Tên Tour"
+        price: "Giá"
+        description: "Mô tả"
+        type: "Loại hình"
+        min_guest: "Số lượng người tối thiểu"
+        max_guest: "Số lượng người tối đa"
+        duration: "Khoảng thời gian"
 
     footer:
       about_us: "Thông tin về chúng tôi"

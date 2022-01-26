@@ -21,6 +21,9 @@
           <%= link_to "<i class='nav-icon fas fa-tachometer-alt'></i><p>Dash board</p>".html_safe,  admin_root_path, class: "nav-link" %>
         </li>
         <li class="nav-item">
+          <%= link_to "<i class='nav-icon fas fa-th'></i>Tour".html_safe, admin_tours_path, class: "nav-link"%>
+        </li>
+        <li class="nav-item">
           <%= link_to "<i class='fas fa-sign-out-alt'></i> Logout".html_safe, logout_path, class: "nav-link", method: :delete %>
         </li>
         <li class="nav-item">

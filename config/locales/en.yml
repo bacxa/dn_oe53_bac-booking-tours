@@ -9,6 +9,17 @@ en:
         password: "Password"
         password_confirmation: "Password confirmation"
 
+      tour:
+        name: "Tour Name"
+        description: "Description"
+        price: "Price"
+        sort: "Type"
+        min_guest: "Min guest"
+        max_guest: "Max guest"
+        duration: "Duration"
+        info_regular: "Info Regular"
+        images: "Image"
+
   controllers:
     sessions:
       flash: "Wrong account or password."
@@ -32,6 +43,27 @@ en:
       registration: "Registration"
       logout: "Logout"
       manager: "Manager"
+
+  admin:
+    tours:
+      form:
+        edit_tour: "Edit Tour"
+        create_tour: "Create Tour"
+      index:
+        name: "Tour Name"
+        price: "Price"
+        action: "Action"
+        create_tour: "Create Tour"
+      show:
+        edit_tour: "Edit Tour"
+        info_tour: "Info Tour"
+        name: "Name"
+        price: "Price"
+        description: "Description"
+        type: "Type"
+        min_guest: "Min guest"
+        max_guest: "Max guest"
+        duration: "Duration"
 
     footer:
       about_us: "About Us"

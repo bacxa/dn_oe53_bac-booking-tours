@@ -220,6 +220,7 @@ footer a{
 }
 
 .btn-user {
+  background: linear-gradient(135deg, rgba(176, 106, 252, 1) 39%, rgba(116, 17, 255, 1) 101%);
   border: none;
   border-radius: 50px;
   width: 100%;
@@ -264,4 +265,18 @@ small {
   .division .line {
       width: 50%
   }
+}
+
+.form-tour{
+  float: right;
+  width: 1000px !important;
+}
+
+.quantity{
+  display: flex;
+  justify-content: flex-start;
+}
+
+.item-quantity{
+  margin-left:  10px;
 }
