@@ -10,4 +10,11 @@ Rails.application.routes.draw do
     root to: "home#index"
     resources :tours, except: %i(destroy)
   end
+
+  resources :tours do
+    member do
+      get :new_booking
+      post :booking
+    end
+  end
 end

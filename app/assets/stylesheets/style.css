@@ -284,3 +284,15 @@ small {
 .alert-success{
   z-index: 9999;
 }
+
+.booking-tours-now a{
+  color: #fff;
+}
+
+.rounded{
+  width: 100%;
+}
+
+.info-right{
+  margin-top: 132px;
+}

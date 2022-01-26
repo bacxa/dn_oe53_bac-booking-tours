@@ -1,0 +1,172 @@
+<div class="container body">
+  <%= form_for(@booking, url: booking_tour_path) do |f| %>
+    <%= render "shared/error_messages", resource: @booking %>
+    <% if current_user.nil? %>
+      <p>
+        <strong><%= t ".please_login_to_book" %></strong><br>
+      </p>
+    <% else %>
+      <div id="error_messages_booking" class="alert-danger-booking">
+      </div>
+
+      <h2><%= t ".info_tour" %></h2>
+      <div class="row">
+        <div class="col-sm-6 col-xs-12" />
+          <div class="form-group">
+            <%= f.label :est_start_date %>
+            <%= f.datetime_field :est_start_date, class: "form-control" %>
+          </div>
+        </div>
+
+        <div class="col-sm-6 col-xs-12" />
+          <div class="form-group">
+            <%= f.label :start_date %>
+            <%= f.datetime_field :start_date, class: "form-control" %>
+          </div>
+        </div>
+      </div>
+
+      <h2><%= t ".info_guest" %></h2>
+      <div class= "guest-container">
+        <%= f.fields_for :guests do |ff| %>
+          <div class="row">
+            <div class="col-12">
+              <div class="form-group">
+                <%= ff.label :name, class: "label-name" %>
+                <%= ff.text_field :name, class: "street-field form-control" %>
+              </div>
+            </div>
+
+            <div class="col-md-4 col-sm-12" />
+              <div class="form-group">
+                <%= ff.label :dob, class: "label-dob" %>
+                <%= ff.date_field :dob, class: "form-control"%>
+              </div>
+
+            </div>
+
+            <div class="col-md-4 col-sm-12" />
+              <div class="form-group">
+                <%= ff.label :passport, class: "label-passport" %>
+                <%= ff.text_field :passport, class: "form-control"%>
+              </div>
+            </div>
+
+            <div class="col-md-4 col-sm-12" />
+              <div class="form-group">
+                <%= ff.label :phone_number, class: "label-phone" %>
+                <%= ff.text_field :phone_number, class: "form-control" %>
+              </div>
+            </div>
+          </div>
+        <% end %>
+      </div>
+      <div class="field">
+        <button type="button" class="js-btn-add btn btn-warning">
+          <%= t ".add_guests" %></button>
+      </div><br>
+
+      <div id="success-message-booking" class="alert-success-custom"></div>
+        <div class="form-group">
+          <div class="submit-booking">
+            <%= f.submit t(".booking_now"), class: "btn btn-success" %>
+          </div>
+        </div>
+      </div>
+    <% end %>
+  <% end %>
+</div>
+
+<script type="text/javascript">
+  $(".js-btn-add").on("click", function() {
+    addAddressField();
+  })
+
+  function addAddressField() {
+    var length = $(".street-field").length;
+    var div = document.createElement("div");
+    var div1 = document.createElement("div");
+    var div2 = document.createElement("div");
+    var div3 = document.createElement("div");
+    var div4 = document.createElement("div");
+    var div5 = document.createElement("div");
+    var div6 = document.createElement("div");
+    var div7 = document.createElement("div");
+    var div8 = document.createElement("div");
+
+    var title_name = $('.label-name').text();
+    var title_dob = $('.label-dob').text();
+    var title_passport = $('.label-passport').text();
+    var title_phone = $('.label-phone').text();
+
+
+    var newlabel = document.createElement("Label");
+        newlabel.innerHTML = title_name;
+
+    var newlabel1 = document.createElement("Label");
+        newlabel1.innerHTML = title_dob;
+
+    var newlabel2 = document.createElement("Label");
+        newlabel2.innerHTML = title_passport;
+
+    var newlabel3 = document.createElement("Label");
+        newlabel3.innerHTML = title_phone;
+
+    var input1 = document.createElement("input");
+    var input2 = document.createElement("input");
+    var input3 = document.createElement("input");
+    var input4 = document.createElement("input");
+
+    input1.type = "text";
+    input1.name = "booking[guests_attributes]["+ length +"][name]"
+    input1.className = "street-field form-control"
+    input1.id = "booking-guests_attributes_" + length + "_name"
+
+    input2.type = "date";
+    input2.name = "booking[guests_attributes]["+ length +"][dob]"
+    input2.className = "form-control"
+    input2.id = "booking-guests_attributes_" + length + "_dob"
+
+    input3.type = "text";
+    input3.name = "booking[guests_attributes]["+ length +"][passport]"
+    input3.className = "form-control"
+    input3.id = "booking-guests_attributes_" + length + "_passport"
+
+    input4.type = "text";
+    input4.name = "booking[guests_attributes]["+ length +"][phone_number]"
+    input4.className = "form-control"
+    input4.id = "booking-guests_attributes_" + length + "_phone_number"
+
+    div1.appendChild(newlabel)
+    div1.appendChild(input1)
+    div2.appendChild(newlabel1)
+    div2.appendChild(input2)
+    div3.appendChild(newlabel2)
+    div3.appendChild(input3)
+    div4.appendChild(newlabel3)
+    div4.appendChild(input4)
+
+    div5.appendChild(div1)
+    div6.appendChild(div2)
+    div7.appendChild(div3)
+    div8.appendChild(div4)
+
+    div1.className = "form-group"
+    div2.className = "form-group"
+    div3.className = "form-group"
+    div4.className = "form-group"
+
+    div5.className = "col-12"
+    div6.className = "col-md-4 col-sm-12"
+    div7.className = "col-md-4 col-sm-12"
+    div8.className = "col-md-4 col-sm-12"
+
+
+    div.appendChild(div5)
+    div.appendChild(div6)
+    div.appendChild(div7)
+    div.appendChild(div8)
+    div.className = "row"
+    $(".guest-container").append(div);
+  }
+</script>
