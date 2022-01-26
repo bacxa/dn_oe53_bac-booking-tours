@@ -1,0 +1,51 @@
+<div class="container">
+  <div class="content-wrapper">
+    <div class="content-header">
+      <div class="container-fluid">
+        <p><strong><%= t ".info_tour" %></strong></p>
+        <table class="table table-bordered">
+          <tbody>
+            <tr>
+              <td><%= t ".name" %></td>
+              <td><%= @tour.name %></td>
+            </tr>
+
+            <tr>
+              <td><%= t ".description" %></td>
+              <td><%= @tour.description %></td>
+            </tr>
+
+            <tr>
+              <td><%= t ".price" %></td>
+              <td><%= @tour.price %></td>
+            </tr>
+
+            <tr>
+              <td><%= t ".type" %></td>
+              <td><%= @tour.sort %></td>
+            </tr>
+
+            <tr>
+              <td><%= t ".min_guest" %></td>
+              <td><%= @tour.min_guest %></td>
+            </tr>
+
+            <tr>
+              <td><%= t ".max_guest" %></td>
+              <td><%= @tour.max_guest %></td>
+            </tr>
+
+            <tr>
+              <td><%= t ".duration" %></td>
+              <td><%= @tour.duration %></td>
+            </tr>
+          </tbody>
+        </table>
+        <br>
+        <button class="btn btn-success"><%= link_to t(".edit_tour"),
+          edit_admin_tour_path(@tour) %></button>
+      </div>
+    </div>
+  </div>
+</div>
+
