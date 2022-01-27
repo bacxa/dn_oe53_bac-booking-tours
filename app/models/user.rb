@@ -2,6 +2,7 @@ class User < ApplicationRecord
   before_save{email.downcase!}
 
   has_many :bookings, dependent: :destroy
+  has_many :rates
 
   VALID_EMAIL_REGEX = /\A[\w+\-.]+@[a-z\d\-.]+\.[a-z]+\z/i.freeze
 

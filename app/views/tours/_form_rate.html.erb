@@ -1,0 +1,55 @@
+<% if current_user %>
+  <section>
+    <div class="container my-5 py-5 text-dark">
+      <div class="card">
+        <div class="card-body p-4">
+          <div class="d-flex flex-start w-100 rounded-circle">
+            <img
+              class=" shadow-1-strong me-3"
+              src="https://mdbcdn.b-cdn.net/img/Photos/Avatars/img%20(21).webp"
+              alt="avatar"/>
+            <div class="w-100">
+              <h5>Add a comment</h5>
+              <div class="rating">
+                <span><input type="radio" name="rating" id="str5" value="5"><label for="str5"></label></span>
+                <span><input type="radio" name="rating" id="str4" value="4"><label for="str4"></label></span>
+                <span><input type="radio" name="rating" id="str3" value="3"><label for="str3"></label></span>
+                <span><input type="radio" name="rating" id="str2" value="2"><label for="str2"></label></span>
+                <span><input type="radio" name="rating" id="str1" value="1"><label for="str1"></label></span>
+              </div>
+              <%= form_for(Rate.new, url: rate_tour_path, remote: true) do |form| %>
+                <div class="form-group">
+                  <%= form.number_field :rating, class: "form-control", id: "rate-form", type: "hidden" %>
+                </div>
+                <div class="form-group">
+                  <%= form.text_area :comment, class: "form-control comment-review" %>
+                </div>
+                <div class="form-group">
+                  <div class="submit-booking">
+                    <%= form.submit "Create Rating", class: "btn btn-success" %>
+                  </div>
+                </div>
+              <% end %>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+<% end %>
+
+<script type="text/javascript">
+  $(document).ready(function(){
+    $('.rating input:radio').attr('checked', false);
+
+    $('.rating input').click(function () {
+      $(".rating span").removeClass('checked');
+      $(this).parent().addClass('checked');
+    });
+
+    $('input:radio').change(
+      function(){
+        $('#rate-form').val(this.value);
+    });
+  });
+</script>

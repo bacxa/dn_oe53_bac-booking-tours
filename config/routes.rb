@@ -15,6 +15,8 @@ Rails.application.routes.draw do
     member do
       get :new_booking
       post :booking
+      get :new_rate
+      post :rate
     end
   end
 end

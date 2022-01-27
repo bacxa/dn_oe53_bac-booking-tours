@@ -1,11 +1,13 @@
 class ToursController < ApplicationController
-  before_action :set_tour, only: %i(show booking new_booking)
+  before_action :set_tour, only: %i(show booking new_booking rate new_rate)
 
   def index
     @tours = Tour.all
   end
 
-  def show; end
+  def show
+    @rates = @tour.rates
+  end
 
   def new_booking
     @booking = @tour.bookings.new
@@ -21,10 +23,29 @@ class ToursController < ApplicationController
     end
   end
 
+  def new_rate
+    @rate = @tour.rates.new
+  end
+
+  def rate
+    @rate = @tour.rates.new(rate_params.merge(user_id: current_user.id))
+    if @rate.save
+      @rates = @tour.rates
+      respond_to do |format|
+        format.js
+      end
+    else
+      render :new
+    end
+  end
   private
 
   def set_tour
     @tour = Tour.find_by(id: params[:id])
+  end
+
+  def rate_params
+    params.require(:rate).permit(:rating, :comment)
   end
 
   def booking_params

@@ -41,5 +41,36 @@
           <div class="card-body"><%= link_to t(".booking_now"), new_booking_tour_path(@tour) %></div>
         </div>
       </div>
+    </div>
+    <div class="content-rating-tour">
+      <%= render "rate" %>
+    </div>
   </div>
 </div>
+
+<%= render "form_rate", tour: @tour %>
+
+<script type="text/javascript">
+  var output = document.createElement("div");
+output.title = rating;
+
+for ( ; yellow >= 1; yellow--)
+{
+  var star = document.createElement("i");
+  star.className = "fa fa-star text-yellow";
+  output.appendChild(star);
+}
+if (yellow == .5) {
+  var star = document.createElement("i");
+  star.className = "fa fa-star-half-o text-yellow";
+  output.appendChild(star);
+}
+for ( ; white >= 1; white--)
+{
+  var star = document.createElement("i");
+  star.className = "fa fa-star-o text-yellow";
+  output.appendChild(star);
+}
+
+return output;
+</script>

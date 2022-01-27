@@ -6,14 +6,24 @@
         <div class="tour-name">
           <p> <%= tour.name %> </p>
         </div>
-        <div class="rating">
-          <span><i class="fas fa-star icon-rating-tour"></i></span>
-          <span><i class="fas fa-star icon-rating-tour"></i></span>
-          <span><i class="fas fa-star icon-rating-tour"></i></span>
-          <span><i class="fas fa-star icon-rating-tour"></i></span>
-          <span><i class="fas fa-star icon-rating-tour"></i></span>
-          <span><i class="fas fa-star"></i></span>
-        </div>
+        <% if tour.rates.present? %>
+          <div class="rating">
+            <% tour.rating.times do  %>
+              <i class="fas fa-star"></i>
+            <% end %>
+            <% (5 - tour.rating).times do  %>
+              <i class="blank-star fas fa-star"></i>
+            <% end %>
+           <!--  <span><i class="fas fa-star icon-rating-tour"></i></span>
+            <span><i class="fas fa-star icon-rating-tour"></i></span>
+            <span><i class="fas fa-star icon-rating-tour"></i></span>
+            <span><i class="fas fa-star icon-rating-tour"></i></span>
+            <span><i class="fas fa-star icon-rating-tour"></i></span>
+            <span><i class="fas fa-star"></i></span> -->
+          </div></br>
+        <% else %>
+          <p> Chưa có đánh giá nào </p>
+        <% end %>
 
         <div class="booking-price">
           <div class="price-tour">

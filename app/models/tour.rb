@@ -3,6 +3,7 @@ class Tour < ApplicationRecord
 
   has_many :bookings, dependent: :destroy
   has_many :guests, through: :bookings
+  has_many :rates
 
   validates :name, presence: true
   validates :description, presence: true
@@ -14,6 +15,10 @@ class Tour < ApplicationRecord
 
   def remaining_tickets
     max_guest - guests.count
+  end
+
+  def rating
+    rates.average('rating').to_f.round
   end
 
   private
