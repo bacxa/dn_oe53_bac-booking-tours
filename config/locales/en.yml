@@ -24,7 +24,8 @@ en:
       reviews: "Reviews"
       login: "Login"
       registration: "Registration"
-      logout: "logout"
+      logout: "Logout"
+      manager: "Manager"
 
     footer:
       about_us: "About Us"
@@ -64,3 +65,13 @@ en:
       registration_now: "Registration now!"
       sign_in: "Sign in"
       do_not_have_an_account: "Do not have an account?"
+
+  admin:
+    home:
+      index:
+       no_session: "You need to log in to continue"
+
+    sidebar:
+      dash_board: "Dash board"
+      logout: "Logout"
+      back_to_home: "Back to home"

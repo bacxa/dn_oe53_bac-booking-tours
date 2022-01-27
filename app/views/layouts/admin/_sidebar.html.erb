@@ -1,0 +1,32 @@
+<aside class="main-sidebar sidebar-dark-primary elevation-4">
+  <a href="#" class="brand-link">
+    <span class="brand-text font-weight-light"><%= Settings.booking.brand %></span>
+  </a>
+
+  <div class="sidebar">
+    <div class="form-inline">
+      <div class="input-group" data-widget="sidebar-search">
+        <input class="form-control form-control-sidebar" type="search" placeholder="Search" aria-label="Search">
+        <div class="input-group-append">
+          <button class="btn btn-sidebar">
+            <i class="fas fa-search fa-fw"></i>
+          </button>
+        </div>
+      </div>
+    </div>
+
+    <nav class="mt-2">
+      <ul class="nav nav-pills nav-sidebar flex-column" data-widget="treeview" role="menu" data-accordion="false">
+        <li class="nav-item">
+          <%= link_to "<i class='nav-icon fas fa-tachometer-alt'></i><p>#{t('.dash_board')}</p>".html_safe,  admin_root_path, class: "nav-link" %>
+        </li>
+        <li class="nav-item">
+          <%= link_to "<i class='fas fa-sign-out-alt'></i>#{t('.logout')}".html_safe, logout_path, class: "nav-link", method: :delete %>
+        </li>
+        <li class="nav-item">
+          <%= link_to "<i class='fas fa-home'></i>#{t('.back_to_home')}".html_safe, root_path, class: "nav-link" %>
+        </li>
+      </ul>
+    </nav>
+  </div>
+</aside>
