@@ -1,0 +1,78 @@
+<div class="container body">
+  <%= form_for(@booking, url: tour_bookings_path) do |f| %>
+    <%= render "shared/error_messages", resource: @booking %>
+    <% if current_user.blank? %>
+      <p>
+        <strong><%= t ".please_login_to_book" %></strong><br>
+      </p>
+    <% else %>
+      <div id="error_messages_booking" class="alert-danger-booking">
+      </div>
+
+      <h2><%= t ".info_tour" %></h2>
+      <div class="row">
+        <div class="col-sm-6 col-xs-12" />
+          <div class="form-group">
+            <%= f.label :est_start_date, class: "required" %>
+            <%= f.datetime_field :est_start_date, class: "form-control" %>
+          </div>
+        </div>
+
+        <div class="col-sm-6 col-xs-12" />
+          <div class="form-group">
+            <%= f.label :start_date %>
+            <%= f.datetime_field :start_date, class: "form-control" %>
+          </div>
+        </div>
+      </div>
+
+      <h2><%= t ".info_guest" %></h2>
+      <div class= "guest-container">
+        <%= f.fields_for :guests do |ff| %>
+          <div class="row">
+            <div class="col-12">
+              <div class="form-group">
+                <%= ff.label :name, class: "label-name required" %>
+                <%= ff.text_field :name, class: "street-field form-control" %>
+              </div>
+            </div>
+
+            <div class="col-md-4 col-sm-12" />
+              <div class="form-group">
+                <%= ff.label :dob, class: "label-dob required" %>
+                <%= ff.date_field :dob, class: "form-control"%>
+              </div>
+
+            </div>
+
+            <div class="col-md-4 col-sm-12" />
+              <div class="form-group">
+                <%= ff.label :passport, class: "label-passport" %>
+                <%= ff.text_field :passport, class: "form-control"%>
+              </div>
+            </div>
+
+            <div class="col-md-4 col-sm-12" />
+              <div class="form-group">
+                <%= ff.label :phone_number, class: "label-phone required" %>
+                <%= ff.text_field :phone_number, class: "form-control" %>
+              </div>
+            </div>
+          </div>
+        <% end %>
+      </div><br/>
+      <div class="field">
+        <button type="button" class="js-btn-add btn btn-warning">
+          <%= t ".add_guests" %></button>
+      </div><br/>
+
+      <div id="success-message-booking" class="alert-success-custom"></div>
+        <div class="form-group">
+          <div class="submit-booking">
+            <%= f.submit t(".booking_now"), class: "btn btn-success" %>
+          </div>
+        </div>
+      </div>
+    <% end %>
+  <% end %>
+</div>
