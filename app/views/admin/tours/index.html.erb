@@ -1,0 +1,18 @@
+<div class="content-wrapper">
+  <div class="content-header">
+    <div class="container-fluid">
+      <h1><%= Settings.booking.brand %></h1>
+      <div class="row" id="tour">
+        <%= render "tour" %>
+      </div>
+      <br>
+      <%= link_to "<button class= 'btn btn-success'>#{t('.create_tour')}</button>".html_safe, new_admin_tour_path %>
+      <div id="paginator">
+      <%= paginate @tours, theme: "twitter-bootstrap-4",
+                   pagination_class: "pagination-sm",
+                   nav_class: "d-inline-b", remote: true
+                   %>
+    </div>
+    </div>
+  </div>
+</div>
