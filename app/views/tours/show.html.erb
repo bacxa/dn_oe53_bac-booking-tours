@@ -1,0 +1,45 @@
+<div class="container mt-5">
+  <div class="row">
+    <div class="col-lg-8">
+      <article>
+        <header class="mb-4">
+          <h1 class="fw-bolder mb-1"><%= t ".infomation_tour"%></h1>
+          <div class="text-muted fst-italic mb-2"><%= @tour.name %></div>
+          <a class="badge bg-secondary text-decoration-none link-light" href="#!"><%= t ".tour_hot" %></a>
+          <a class="badge bg-secondary text-decoration-none link-light" href="#!"><%= t ".nice_place" %></a>
+        </header>
+          <figure class="mb-4"><%= image_tag @tour.avatar, class: "img-fluid rounded" %></figure>
+        <section class="mb-5">
+          <p class="fs-5 mb-4"><%= @tour.description %></p>
+        </section>
+      </article>
+      </div>
+      <div class="col-lg-4">
+        <div class="card mb-4 info-right">
+          <div class="card-header"><%= @tour.name %></div>
+          <div class="card-body">
+            <div class="row">
+              <div class="col-sm-6">
+                <ul class="list-unstyled mb-0">
+                  <li><%= t ".price_tour" %></li>
+                  <li><%= t ".quantity" %></li>
+                  <li><%= t ".remaining_tickets" %></li>
+                </ul>
+              </div>
+              <div class="col-sm-6">
+                <ul class="list-unstyled mb-0">
+                  <li><%= number_to_currency @tour.price %></li>
+                  <li><%= @tour.max_guest %></li>
+                  <li><%= @tour.remaining_tickets %></li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="card mb-4">
+          <div class="card-header"><%= t ".book_this_tour_now" %></div>
+          <div class="card-body"><%= link_to t(".booking_now"), new_tour_booking_path(@tour) %></div>
+        </div>
+      </div>
+  </div>
+</div>

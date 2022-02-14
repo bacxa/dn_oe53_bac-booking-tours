@@ -20,6 +20,25 @@ en:
         info_regular: "Info Regular"
         images: "Image"
 
+      guest:
+        name: "Name"
+        dob: "Date of birth"
+        passport: "Passport"
+        phone_number: "Phone number"
+
+      booking:
+        est_start_date: "Estimated start date"
+        start_date: "Start date"
+
+    errors:
+      models:
+        booking:
+          attributes:
+            est_start_date:
+              est_start_date_must_before_start_date: "Must be before the start date"
+            guests:
+              too_many: "Too many"
+
   home:
     index:
       featured_tour: "Featured Tour"
@@ -37,6 +56,27 @@ en:
       registration: "Registration"
       logout: "Logout"
       manager: "Manager"
+
+  admin:
+    tours:
+      form:
+        edit_tour: "Edit Tour"
+        create_tour: "Create Tour"
+      index:
+        name: "Tour Name"
+        price: "Price"
+        action: "Action"
+        create_tour: "Create Tour"
+      show:
+        edit_tour: "Edit Tour"
+        info_tour: "Info Tour"
+        name: "Name"
+        price: "Price"
+        description: "Description"
+        type: "Type"
+        min_guest: "Min guest"
+        max_guest: "Max guest"
+        duration: "Duration"
 
     footer:
       about_us: "About Us"
@@ -111,3 +151,34 @@ en:
         min_guest: "Min guest"
         max_guest: "Max guest"
         duration: "Duration"
+
+  shared:
+    error_messages:
+      the_form_contains: "The form contains"
+      error: "error"
+
+  tours:
+    new_booking:
+      info_tour: "Detail information"
+      please_login_to_book: "Please login to book:"
+      info_guest: "Guest infomation"
+      booking_now: "Booking now"
+      add_guests: "Add Guests"
+      no_session: "You need to log in to continue"
+
+    show:
+      infomation_tour: "Tour details"
+      price_tour: "Price Tour"
+      quantity: "Quantity"
+      book_this_tour_now: "Book this Tour now"
+      booking_now: "Booking now"
+      tour_hot: "Tour hot"
+      nice_place: "Nice place"
+      remaining_tickets: "Remaining Tickets"
+
+    tour:
+      booking_now: "Booking now"
+
+  bookings:
+    new:
+      booking_now: "Booking now"
