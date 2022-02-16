@@ -1,0 +1,28 @@
+<table class="table table-bordered">
+  <thead>
+    <tr>
+      <th>Người dùng</th>
+      <th>Tên Tour</th>
+      <th>Trạng thái</th>
+      <th>Action</th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @bookings.each do |booking| %>
+      <tr>
+        <td><%= booking.user.name %></td>
+        <td><%= booking.tour.name %></td>
+        <td>
+          <% if booking.status === "waiting" %>
+            <button class="btn btn-warning">Đang chờ</button>
+          <% elsif booking.status === "rejected" %>
+            <button class="btn btn-danger">Từ chối</button>
+          <% else %>
+            <button class="btn btn-primary">Đồng ý</button>
+          <% end %>
+        </td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>

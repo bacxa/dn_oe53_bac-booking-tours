@@ -301,3 +301,70 @@ small {
   content:" *";
   color: red;
 }
+
+.featured-tours-box a{
+  text-decoration: none;
+  color: black !important;
+}
+
+.nav-pills a{
+  color: #fff;
+  text-decoration: none;
+}
+
+.main-sidebar{
+  width: 20%;
+  background-color: #343a40;
+  height: 680px;
+}
+
+.brand-text {
+  color: #fff;
+}
+
+.nav-pills li{
+  margin-top: 15px;
+}
+
+.translation_missing{
+  margin-left: 15px;
+}
+
+.fa-tachometer-alt{
+  margin-left: 48px;
+}
+
+.main-admin{
+  display: flex;
+  flex-direction: row
+}
+
+.table-bordered{
+  width: 1000px;
+}
+
+.navbar-text a{
+  text-decoration: none;
+}
+
+.featured-tours-box{
+  transition: transform .5s;
+  box-shadow: 4px 4px #AAA;
+}
+
+.card-body a{
+  text-decoration: none;
+}
+
+#paginator{
+  margin-top: 10px;
+}
+
+.featured-tours-box:hover{
+  transform: scale(1.08);
+}
+
+.main-admin{
+  display: flex;
+  flex-direction: row
+}
