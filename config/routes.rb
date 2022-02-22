@@ -9,6 +9,11 @@ Rails.application.routes.draw do
   namespace :admin do
     root to: "home#index"
     resources :tours, except: %i(destroy)
+    resources :bookings do
+      member do
+        post "update_status"
+      end
+    end
   end
 
   resources :tours do

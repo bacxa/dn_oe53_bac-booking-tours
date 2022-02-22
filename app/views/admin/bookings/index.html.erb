@@ -1,0 +1,16 @@
+<div class="content-wrapper">
+  <div class="content-header">
+    <div class="container-fluid">
+      <div class="row" id="booking">
+        <%= render "booking" %>
+      </div>
+      <div id="abc">
+        <%= paginate @bookings, theme: "twitter-bootstrap-4",
+                     pagination_class: "pagination-sm",
+                     nav_class: "d-inline-b", remote: true
+                     %>
+      </div>
+      <br>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,26 @@
+<!-- <div class="container"> -->
+  <div class="card card-booking mt-3 p-3"><span class="klod text-center">Tên khác hàng chính</span>
+  <% @booking.guests.each do |guest| %>
+    <span class="data mt-2 text-center"><%= guest.name%></span>
+    <span class="about mt-2 text-center">Phone number: <%= guest.phone_number %></span>
+    <span class="about mt-2 text-center">Ngày tháng năm sinh: <%= guest.dob %></span>
+    <span class="about mt-2 text-center">Số chứng minh nhân dân: <%= guest.passport %></span>
+  <% end %>
+
+  <div class="image mr-3 text-center mt-3"> <img src="https://i.imgur.com/0LKZQYM.jpg" class="rounded-circle" width="60" />
+  </div>
+  <span class="name text-center"> <%= @booking.user.name %>,<span class="company">Uber</span></span></span>
+  <div class="d-flex justify-content-center gap-2">
+    <% if @booking.status === "waiting" %>
+      <button class="btn btn-success btn1"><%= link_to "Chấp nhận", update_status_admin_booking_path(confirm: "accepted"), method: :post %></button>
+      <button class="btn btn-danger btn1"><%= link_to "Từ chối", update_status_admin_booking_path(confirm: "rejected"), method: :post %></button>
+    <% elsif @booking.status === "rejected" %>
+      <button class="btn btn-success btn1"><%= link_to "Chấp nhận", update_status_admin_booking_path(confirm: "accepted"), method: :post %></button>
+      <button class="btn btn-warning btn1"><%= link_to "Chờ xử lý", update_status_admin_booking_path(confirm: "waiting"), method: :post %></button>
+    <% else %>
+      <button class="btn btn-warning btn1"><%= link_to "Chờ xử lý", update_status_admin_booking_path(confirm: "waiting"), method: :post %></button>
+      <button class="btn btn-danger btn1"><%= link_to "Từ chối", update_status_admin_booking_path(confirm: "rejected"), method: :post %></button>
+    <% end %>
+  </div>
+ </div>
+</div>

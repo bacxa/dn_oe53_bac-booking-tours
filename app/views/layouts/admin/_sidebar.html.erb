@@ -1,4 +1,4 @@
-<aside class="main-sidebar sidebar-dark-primary elevation-4">
+<!-- <aside class="main-sidebar sidebar-dark-primary elevation-4">
   <a href="#" class="brand-link">
     <span class="brand-text font-weight-light"><%= Settings.booking.brand %></span>
   </a>
@@ -32,4 +32,22 @@
       </ul>
     </nav>
   </div>
-</aside>
+</aside> -->
+
+<div class="px-0 bg-light dashboard">
+  <div class="d-flex">
+    <div class="d-flex align-items-center " id="navbar"> <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbar-items" aria-controls="navbarSupportedContent" aria-expanded="true" aria-label="Toggle navigation"> <span class="fas fa-bars"></span> </button> <a class="text-decoration-none fs14 ps-2" href="#"><%= Settings.booking.brand %></a> </div>
+  </div>
+  <div class="d-md-flex">
+    <ul id="navbar-items" class="p-0">
+      <li> <span class="fas fa-th-list"></span> <span class="ps-3 name">Dashboard</span> </li>
+      <li> <span class="fas fa-chart-line"></span> <span class="ps-3 name">TRANSACTIONS</span> </li>
+      <li> <span class="fas fa-clipboard-check"></span> <span class="ps-3 name">finanials</span> </li>
+      <li> <span class="fas fa-ticket-alt"></span> <span class="ps-3 name"><%= link_to "#{t('.tour')}".html_safe, admin_bookings_path %></span> </li>
+      <li> <span class="fas fa-plane-departure"></span> <span class="ps-3 name"><%= link_to "#{t('.tour')}".html_safe, admin_tours_path, class: "bbb" %></span> </li>
+      <li> <span class="fas fa-sign-out-alt"></span> <span class="ps-3 name"><%= link_to "#{t('.logout')}".html_safe, logout_path, method: :delete, class: "bbb" %></span> </li>
+      <li> <span class="fas fa-store-alt"></span> <span class="ps-3 name"><%= link_to "#{t('.back_to_home')}".html_safe, root_path , class: "bbb"%></span> </li>
+
+    </ul>
+  </div>
+</div>
