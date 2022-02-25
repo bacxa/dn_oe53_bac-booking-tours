@@ -1,0 +1,48 @@
+<div class="container">
+  <div class="row d-flex justify-content-center mt-5">
+    <div class="col-12 col-md-8 col-lg-6 col-xl-5">
+      <div class="card py-3 px-2">
+        <p class="text-center mb-3 mt-2"><%= t ".sign_in_with_your_social_media_account" %></p>
+        <div class="row mx-auto ">
+          <div class="col-4"> <i class="fab fa-twitter"></i> </div>
+          <div class="col-4"> <i class="fab fa-facebook"></i> </div>
+          <div class="col-4"> <i class="fab fa-google"></i> </div>
+        </div>
+        <div class="division">
+          <div class="row">
+            <div class="col-3">
+              <div class="line l"></div>
+            </div>
+            <div class="col-6"><span><%= t ".sign_in_with_email" %></span></div>
+            <div class="col-3">
+              <div class="line r"></div>
+            </div>
+          </div>
+        </div>
+        <%= form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
+          <div class="form-group">
+            <%= f.label :email %><br />
+            <%= f.email_field :email, autofocus: true, autocomplete: "email", class: "form-control"%>
+          </div>
+
+          <div class="form-group">
+            <%= f.label :password %><br />
+            <%= f.password_field :password, autocomplete: "current-password", class: "form-control" %>
+          </div>
+
+          <% if devise_mapping.rememberable? %>
+            <div class="field">
+              <%= f.check_box :remember_me %>
+              <%= f.label :remember_me %>
+            </div>
+          <% end %>
+
+          <div class="form-group mt-3">
+            <%= f.submit t(".sign_in"), class:"btn btn-user btn-success"%>
+          </div>
+          <%= render "devise/shared/links" %>
+        <% end %>
+      </div>
+    </div>
+  </div>
+</div>

@@ -1,5 +1,6 @@
 class Admin::AdminController < ActionController::Base
   include SessionsHelper
+  before_action :authenticate_user!
   layout "admin/admin"
   before_action :check_user, :check_admin
 
