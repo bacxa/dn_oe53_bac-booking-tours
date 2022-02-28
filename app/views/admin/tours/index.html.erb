@@ -6,7 +6,13 @@
         <%= render "tour" %>
       </div>
       <br>
-      <%= link_to "<button class= 'btn btn-success'>#{t('.create_tour')}</button>".html_safe, new_admin_tour_path %>
+      <% if can? :create, Tour %>
+        <div class="row mt-3">
+          <div class="col">
+            <%= link_to "<button class= 'btn btn-success'>#{t('.create_tour')}</button>".html_safe, new_admin_tour_path %>
+          </div>
+        </div>
+      <% end %>
       <div id="paginator">
       <%= paginate @tours, theme: "twitter-bootstrap-4",
                    pagination_class: "pagination-sm",
