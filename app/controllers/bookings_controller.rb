@@ -1,5 +1,5 @@
 class BookingsController < ApplicationController
-  before_action :check_require_login, only: %i(new create)
+  before_action :authenticate_user!
 
   def new
     @booking = Booking.new

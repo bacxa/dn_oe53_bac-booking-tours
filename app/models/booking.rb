@@ -20,8 +20,8 @@ class Booking < ApplicationRecord
   end
 
   def check_limit_guests
-    if guests.size + tour.guests.count > tour.max_guest
-      errors.add(:guests, :too_many)
-    end
+    return if guests.size + tour.guests.count <= tour.max_guest
+
+    errors.add(:guests, :too_many)
   end
 end
