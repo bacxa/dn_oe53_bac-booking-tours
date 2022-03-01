@@ -1,4 +1,6 @@
 class Admin::ToursController < Admin::AdminController
+  authorize_resource
+
   def index
     @tours = Tour.newest.page(params[:page]).per Settings.tour.admin_per_page
   end
