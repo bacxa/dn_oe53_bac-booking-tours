@@ -41,4 +41,10 @@ $(document).ready(function() {
       div.append(div8)
       mainBody.append(div);
     }
+    var myModal = document.getElementById('myModal')
+    var myInput = document.getElementById('myInput')
+
+    myModal.addEventListener('shown.bs.modal', function () {
+      myInput.focus()
+    })
 });

@@ -1,0 +1,52 @@
+<% if @users.any? %>
+  <div class="content-wrapper">
+    <div class="content-header">
+      <div class="container-fluid">
+        <div class="row">
+        <header class="text-center text-white">
+          <h1 class="display-4">Danh sách người dùng</h1>
+        </header>
+          <div class="container">
+            <div class="row">
+              <div class="col-lg-10 mx-auto">
+                <div class="card">
+                  <div class="card-body p-5 bg-white rounded">
+                    <div class="table-responsive">
+
+                      <div class="main-admin-search-user">
+                        <%= search_form_for(@q, url: admin_users_path, method: :get, class: "form-inline") do |f| %>
+                          <div class="form-search-tour">
+                            <%= f.search_field :name_cont, placeholder: t("search_user"), class: "form-control"%>
+                            <%= f.submit t("search_user"), class: "btn btn-primary" %>
+                          </div>
+                        <% end %>
+                      </div></br>
+
+                      <div id="user">
+                        <%= render "table" %>
+                      </div>
+                      <div id="paginator">
+                        <%= paginate @users, theme: "twitter-bootstrap-4",
+                                     pagination_class: "pagination-sm",
+                                     nav_class: "d-inline-b", remote: true
+                                     %>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <br>
+      </div>
+    </div>
+  </div>
+<% else %>
+  <div class="content-wrapper">
+    <div class="alert alert-warning mt-4">
+      <strong><%= t ".no_user" %></strong>
+    </div>
+  </div>
+<% end %>
+

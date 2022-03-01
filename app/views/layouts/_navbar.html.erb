@@ -1,6 +1,6 @@
 <nav class="navbar navbar-expand-lg navbar-light bg-light">
   <div class="container-fluid">
-    <a class="navbar-brand" href="#"><%= Settings.booking.brand %></a>
+    <%= link_to "#{Settings.booking.brand}", root_path, class: "navbar-brand" %>
     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarText" aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
     </button>
@@ -15,7 +15,58 @@
         <li class="nav-item">
           <a class="nav-link active" href="#"><%= t ".reviews" %></a>
         </li>
+        <% if controller.controller_name == "home" || controller.controller_name == "tours" %>
+          <li class="nav-item">
+             <a class="nav-link active" data-bs-toggle="modal" data-bs-target="#exampleModal">
+              <%= t ".search" %>
+            </a>
+
+            <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+              <div class="modal-dialog">
+                <div class="modal-content">
+                  <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel"><%= t ".find_tour" %></h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                  </div>
+                  <div class="modal-body">
+                    <%= search_form_for(@q, url: tours_path, method: :get) do |f| %>
+                      <div class="field">
+                        <%= f.label :tour_cont, t("ransack.name_or_description") %>
+                        <%= f.search_field :name_or_description_cont, class: "form-control"%>
+                      </div>
+                      <div class="field">
+                        <%= f.label :price, t("ransack.price") %>
+                        <div class="form-group price-search">
+                          <%= f.text_field :price_gteq, class: "form-control" %> -
+                          <%= f.text_field :price_lteq, class: "form-control" %>
+                        </div>
+                      </div>
+                      <div class="field">
+                        <%= f.label :created_at_eq, t("ransack.created_at") %>
+                        <%= f.date_field :created_at_eq, class: "form-control input-sm" %>
+                      </div>
+                  </div>
+                      <div class="modal-footer">
+                        <button type="button" class="btn btn-warning"><%= link_to t(".clear"), request.path, class: "clear-link" %></button>
+                        <%= f.submit t(".search"), class: "btn btn-primary" %>
+                      </div>
+                    <% end %>
+                </div>
+              </div>
+            </div>
+          </li>
+        <% end %>
       </ul>
+
+      <% if controller.controller_name == "home" || controller.controller_name == "tours" %>
+        <%= search_form_for(@q, url: tours_path, method: :get, class: "form-inline") do |f| %>
+          <div class="form-search-tour">
+            <%= f.search_field :name_cont, placeholder: t("search"), class: "form-control" %>
+            <%= f.submit t("search"), class: "btn btn-primary" %>
+          </div>
+        <% end %>
+      <% end %>
+
       <div class="dropdown">
         <a class="dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false">
           <i class="fas fa-2x fa-language"></i>

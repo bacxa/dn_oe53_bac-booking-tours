@@ -1,0 +1,20 @@
+<% if @tours.any? %>
+  <div class="container">
+    <div class="title-search-tour">
+      <h3><%= t ".menu-tour" %></h3>
+    </div>
+    <div class="row" id="tour-search">
+      <%= render @tours %>
+    </div>
+    <div id="paginator">
+      <%= paginate @tours, theme: "twitter-bootstrap-4",
+                   pagination_class: "pagination-sm",
+                   nav_class: "d-inline-b", remote: true
+                   %>
+    </div>
+  </div>
+<% else %>
+  <div class="alert alert-warning mt-4">
+    <strong><%= t ".no_tour" %></strong>
+  </div>
+<% end %>
