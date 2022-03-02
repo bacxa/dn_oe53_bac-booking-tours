@@ -6,6 +6,7 @@ class User < ApplicationRecord
   before_save :downcase_email
 
   has_many :bookings, dependent: :destroy
+  has_many :notifications, foreign_key: "to_user_id", dependent: :destroy
 
   validates :name, presence: true,
                    length: {maximum: Settings.user.length_name.max}
@@ -20,5 +21,13 @@ class User < ApplicationRecord
 
   def downcase_email
     email.downcase!
+  end
+
+  def count_noti
+    notifications.not_seen.count
+  end
+
+  def list_notification
+    notifications.includes(:booking, :from_user).newest
   end
 end

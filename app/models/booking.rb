@@ -11,6 +11,12 @@ class Booking < ApplicationRecord
 
   accepts_nested_attributes_for :guests
 
+  scope :newest, ->{order created_at: :desc}
+
+  def total_money
+    tour.price * guests.count
+  end
+
   private
 
   def est_start_date_must_before_start_date

@@ -1,0 +1,19 @@
+<tr>
+  <%= link_to root_path do %>
+    <td><%= booking.id %></td>
+    <td><img src="https://i.imgur.com/VKOeFyS.png" width="25"><%= booking.user.name %></td>
+    <td class="mr-20">
+      <% if booking.waiting? %>
+        <i class="fas fa-hourglass-half orange"></i><span class="ms-1"><%= t ".waiting" %></span>
+      <% elsif booking.rejected? %>
+        <i class="far fa-times-circle text-danger"></i><span class="ms-1"><%= t ".reject" %></span>
+      <% else %>
+        <i class="fas fa-check-square green"></i><span class="ms-1"><%= t ".agree" %></span>
+      <% end %>
+    </td>
+    <td><%= booking.tour.name %></td>
+    <td><%= booking.guests.count %></td>
+    <td class="text-end"><span class="fw-bolder"><%= number_to_currency booking.total_money %></span></td>
+    <td><%= link_to t(".edit"), admin_booking_path(booking) %></td>
+  <% end %>
+</tr>

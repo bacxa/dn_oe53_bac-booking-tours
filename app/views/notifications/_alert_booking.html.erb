@@ -1,0 +1,16 @@
+<%= link_to(notification_path(notification), method: :patch) do %>
+  <li class='dropdown-item-custom item-notification <%= notification.seen ? "seen" : "not-seen" %>'>
+  <img src='https://sohanews.sohacdn.com/thumb_w/660/2017/1291610710209554594881299982616623413613868o-1506468168931.jpg' />
+  <p><%= t "notifications.alert.booking" %><span class='font-bold'><%= notification.booking.tour.name %>
+  </p>
+  <p class='mini-font'><%= t "notifications.alert.about" %><span class='time-before-<%= notification.id %>'></span><%= t "notifications.alert.ago" %></p>
+  </li>
+<% end %>
+
+<div class="noti-id">
+  <%= notification.id %>
+</div>
+
+<div class="noti-created">
+  <%= notification.created_at.to_i %>
+</div>

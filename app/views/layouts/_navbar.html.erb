@@ -77,11 +77,38 @@
         </ul>
       </div>&nbsp;&nbsp;&nbsp;
       <% if user_signed_in? %>
-        <div class="dropdown">
-          <button class="btn dropdown-toggle" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
-            Hi, <%= current_user.name %>
+
+        <div class="dropdown navbar-right-item">
+          <a class="nav-link" href="#" data-bs-toggle="dropdown" aria-expanded="false">
+            <div class="notification">
+              <div id="notification-counter">
+                <%= render "notifications/counter", counter: current_user.count_noti %>
+              </div>
+              <div class="bell">
+                <span class="fas fa-bell fa-lg"></span>
+              </div>
+            </div>
+          </a>
+
+          <ul class="dropdown-menu dropdown-menu-end ul-notification arrow_box_notification" aria-labelledby="navbarDropdown">
+            <div class="mt-15">
+              <li class="confirm-notification">
+                <h4 class="ml-15"><%= t ".new_notification" %></h4>
+                <a class="mr-15"><%= t ".see_all" %></a>
+              </li>
+            </div>
+            <li><hr class="dropdown-divider"></li>
+            <div class="display-content" id="notifications-list" >
+              <%= render "notifications/index", notifications: current_user.list_notification %>
+            </div>
+          </ul>
+        </div>
+
+        <div class="dropdown select-menu">
+          <button class="avt-user-login" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
+            <img src="https://media.istockphoto.com/vectors/human-face-avatar-icon-profile-for-social-network-man-vector-vector-id1227618784?k=20&m=1227618784&s=170667a&w=0&h=w8WOZjZf7wM-QUEEciRtOdRK5KmOovlt69RjkXFQ8k8=">
           </button>
-          <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
+          <ul class="dropdown-menu" id="card-menu-home" aria-labelledby="dropdownMenuButton1">
             <li><%= link_to t(".logout"), destroy_user_session_path, class: "dropdown-item", method: :delete %></li>
             <% if current_user && current_user.admin? %>
               <li><%= link_to t(".manager"), admin_root_path, class: "dropdown-item" %></li>

@@ -1,0 +1,47 @@
+<div class="content-wrapper">
+  <div class="content-header">
+    <div class="container-fluid">
+      <div class="row" id="booking">
+        <div class="container mt-5 px-2 booking-all">
+          <div class="mb-2 d-flex justify-content-between align-items-center">
+            <div>
+              <%= form_tag admin_bookings_path, method: :get do %>
+                <%= text_field_tag :search, params[:search], class: "form-control w-100", placeholder: t("search_booking") %>
+              <% end %>
+            </div>
+          </div>
+
+          <% if @bookings.empty? %>
+            <%= t ".no_records_found" %>
+          <% else %>
+            <div class="table-responsive">
+              <table class="table table-responsive table-borderless">
+                <thead>
+                  <tr class="bg-light">
+                    <th scope="col" class="col1">#</th>
+                    <th scope="col" class="col2"><%= t ".name_booking" %></th>
+                    <th scope="col" class="col3"><%= t ".status" %></th>
+                    <th scope="col" class="col4"><%= t ".tour_name" %></th>
+                    <th scope="col" class="col5"><%= t ".guests" %></th>
+                    <th scope="col" class="col6" class="text-end"><span><%= t ".total_price" %></span></th>
+                    <th scope="col" class="col7"><%= t ".action" %></th>
+                  </tr>
+                </thead>
+                <tbody class="ii">
+                  <%= render @bookings %>
+                </tbody>
+              </table>
+            </div>
+          <% end %>
+        </div>
+      </div>
+      <div id="abc">
+        <%= paginate @bookings, theme: "twitter-bootstrap-4",
+                     pagination_class: "pagination-sm",
+                     nav_class: "d-inline-b", remote: true
+                     %>
+      </div>
+      <br>
+    </div>
+  </div>
+</div>

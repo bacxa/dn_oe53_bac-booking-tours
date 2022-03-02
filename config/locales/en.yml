@@ -58,6 +58,8 @@ en:
       manager: "Manager"
       search: "Search"
       find_tour: "Search Tour"
+      see_all: "See all"
+      new_notification: "New Notification"
 
   admin:
     tours:
@@ -134,6 +136,31 @@ en:
       logout: "Logout"
       back_to_home: "Back to home"
 
+    bookings:
+      booking:
+        name_booking: "Orderer"
+        status: "Status"
+        tour_name: "Tour name"
+        guests: "Number of people accompanying"
+        total_price: "Total money"
+        action: "Action"
+        waiting: "Waiting"
+        reject: "Reject"
+        agree: "Agree"
+        edit: "Edit"
+        no_records_found: "No records found"
+        search_booking: "Search"
+
+      show:
+        name_customer: "Main customer name"
+        phone_number: "Phone number"
+        dob: "Date of birth"
+        passport: "Passport"
+        waiting: "Waiting"
+        reject: "Reject"
+        agree: "Agree"
+        user: "User"
+
     tours:
       form:
         edit_tour: "Edit Tour"
@@ -184,3 +211,25 @@ en:
   bookings:
     new:
       booking_now: "Booking now"
+
+  search: "Search"
+  search_user: "Search user"
+
+  js:
+    time:
+      year: " year"
+      month: " month"
+      day: " day"
+      hour: " hour"
+      minute: " minute"
+      one_minute: " 1 minute"
+
+  notifications:
+    alert:
+      booking: "Congratulations, you have successfully booked the tour "
+      about: "About "
+      ago: " ago"
+    update:
+      alert_booking: "alert_booking"
+      welcome: "welcome"
+

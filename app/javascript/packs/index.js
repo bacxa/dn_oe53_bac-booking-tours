@@ -1,8 +1,29 @@
 $(document).ready(function() {
+  $('.noti-id').hide();
+  $('.noti-created').hide();
+
+  var id = parseInt($('.noti-id').text())
+  var date1 = $('.noti-created').text()
+  $('.time-before'+"-"+id).html(before_time(parseInt(Date.now()/1000) - parseInt(date1)));
+  function before_time(time){
+    if(time > 60*60*24*30*11){
+      return parseInt(time/(60*60*24*30*11)) + I18n.t("js.time.year");
+    } else if (time > 60*60*24*30){
+      return parseInt(time/(60*60*24*30)) + I18n.t("js.time.month");
+    } else if (time > 60*60*24){
+      return parseInt(time/(60*60*24)) + I18n.t("js.time.day");
+    } else if (time > 60*60){
+      return parseInt(time/ (60*60)) + I18n.t("js.time.hour");
+    } else if (time > 59){
+      return parseInt(time/60) + I18n.t("js.time.minute");
+    } else {
+      return I18n.t("js.time.one_minute");
+    }
+  }
+
   $(".js-btn-add").on("click", function() {
       addAddressField();
     })
-
     function addAddressField() {
       var mainBody = $('.guest-container')
       var length = $(".street-field").length;

@@ -58,6 +58,8 @@ vi:
       manager: "Quản lý"
       search: "Tìm kiếm"
       find_tour: "Tìm kiếm Tour"
+      see_all: "Xem tất cả"
+      new_notification: "Thông báo mới"
 
   admin:
     tours:
@@ -134,6 +136,31 @@ vi:
       logout: "Đăng xuất"
       back_to_home: "Quay về trang chủ"
 
+    bookings:
+      booking:
+        name_booking: "Người đặt"
+        status: "Trạng thái"
+        tour_name: "Tên tour"
+        guests: "Số người đi cùng"
+        total_price: "Tổng tiền"
+        action: "Hành động"
+        waiting: "Đang chờ"
+        reject: "Từ chối"
+        agree: "Đồng ý"
+        edit: "Chỉnh sửa"
+        no_records_found: "Không tìm thấy kết quả"
+        search_booking: "Tìm kiếm"
+
+      show:
+        name_customer: "Tên khách hàng chính"
+        phone_number: "Số điện thoại"
+        dob: "Ngày tháng năm sinh"
+        passport: "Số chứng minh nhân dân"
+        waiting: "Đang chờ"
+        reject: "Từ chối"
+        agree: "Đồng ý"
+        user: "Người dùng"
+
     tours:
       form:
         edit_tour: "Cập nhật tour"
@@ -184,3 +211,24 @@ vi:
   bookings:
     new:
       booking_now: "Đặt ngay"
+
+  search: "Tìm kiếm"
+  search_user: "Tìm kiếm"
+
+  js:
+    time:
+      year: " năm"
+      month: " tháng"
+      day: " ngày"
+      hour: " giờ"
+      minute: " phút"
+      one_minute: " 1 phút"
+
+  notifications:
+    alert:
+      booking: "Chúc mừng bạn đã đặt thành công Tour du lịch "
+      about: "Khoảng "
+      ago: " trước"
+    update:
+      alert_booking: "alert_booking"
+      welcome: "welcome"
