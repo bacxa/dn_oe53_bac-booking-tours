@@ -56,6 +56,8 @@ vi:
       registration: "Đăng ký"
       logout: "Đăng xuất"
       manager: "Quản lý"
+      search: "Tìm kiếm"
+      find_tour: "Tìm kiếm Tour"
 
   admin:
     tours:

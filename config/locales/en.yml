@@ -56,6 +56,8 @@ en:
       registration: "Registration"
       logout: "Logout"
       manager: "Manager"
+      search: "Search"
+      find_tour: "Search Tour"
 
   admin:
     tours:

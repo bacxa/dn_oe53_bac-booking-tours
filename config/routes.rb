@@ -5,6 +5,7 @@ Rails.application.routes.draw do
   namespace :admin do
     root to: "home#index"
     resources :tours, except: %i(destroy)
+    resources :users, only: %i(index show destroy)
   end
 
   resources :tours do
